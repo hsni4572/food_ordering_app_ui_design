@@ -72,7 +72,7 @@ class welcome_page extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 50,
           )
         ],
       ),
