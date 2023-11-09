@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:food_ordering_app_ui_design/homescreen.dart';
 
 class welcome_page extends StatelessWidget {
   const welcome_page({super.key});
@@ -14,7 +15,7 @@ class welcome_page extends StatelessWidget {
         children: [
           Image.asset('assets/images/boy.png'),
           SizedBox(
-            height: 15,
+            height: 1,
           ),
           Text(
             'Order Your Food Now...!',
@@ -25,26 +26,29 @@ class welcome_page extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 8,
+            height: 1,
           ),
           Padding(
             padding: EdgeInsets.all(15),
             child: Text(
               'Order Your Loved Food Now And Get Delivery At Your Doorstep!',
               style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 13,
                   color: Colors.black,
                   fontStyle: FontStyle.italic),
               textAlign: TextAlign.center,
             ),
           ),
           SizedBox(
-            height: 80,
+            height: 160,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => homescreen()));
+            },
             child: Container(
-              height: 70,
+              height: 60,
               width: 280,
               decoration: BoxDecoration(
                   color: Colors.redAccent,
@@ -72,7 +76,7 @@ class welcome_page extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 30,
           )
         ],
       ),
