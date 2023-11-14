@@ -5,8 +5,13 @@ import 'package:flutter/material.dart';
 class homescreen extends StatelessWidget {
   homescreen({super.key});
 
-  List foods = ["Burger", "Pizza", "Snacks", "Water"];
-  List foods2 = ["Chicken Burger", "Cheese Pizza"];
+  List foods = [
+    "Burger",
+    "Pizza",
+    "Snacks",
+    "Water",
+  ];
+  List foods2 = ["Chicken Burger", "Cheese Pizza,"];
   List<Color> bgColors = [
     Color(0xFFFBDCDA),
     Color(0xFFD4EEF3),
@@ -110,7 +115,122 @@ class homescreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset('assets/images/banner.jpg'),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Categories',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 22),
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Explore All',
+                        style: TextStyle(color: Colors.redAccent, fontSize: 17),
+                      ))
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 120,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: foods.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 100,
+                      margin: EdgeInsets.only(left: 15),
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      decoration: BoxDecoration(
+                          color: bgColors[index],
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            'assets/images/${foods[index]}.png',
+                            height: 80,
+                            width: 80,
+                          ),
+                          Text(
+                            foods[index],
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54,
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  }),
+            ),
+            SizedBox(height: 30),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Famous Deals',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 22),
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'See All',
+                        style: TextStyle(color: Colors.redAccent, fontSize: 17),
+                      ))
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 120,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: foods.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 250,
+                      margin: EdgeInsets.only(left: 15),
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      decoration: BoxDecoration(
+                          color: bgColors[index],
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            'assets/images/${foods[index]}.png',
+                            height: 80,
+                            width: 80,
+                          ),
+                          Text(
+                            foods[index],
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54,
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  }),
+            ),
           ],
         ),
       ),
