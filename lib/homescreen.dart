@@ -51,7 +51,7 @@ class homescreen extends StatelessWidget {
                           InkWell(
                             onTap: () {},
                             child: Text(
-                              'Millat Motors Khanpur',
+                              'Tufail Colony Khanpur',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 19),
                             ),
